@@ -79,7 +79,7 @@ sed -i 's/: 30/: 20/' feeds/danshui1/luci-app-mosdns/root/usr/share/luci/menu.d/
 sed '/"title": "SmartDNS",/a\        "order": 25,' feeds/danshui1/luci-app-mosdns/root/usr/share/luci/menu.d/luci-app-mosdns.json
 sed -i 's/50/40/' feeds/danshui1/luci-app-wolplus/luasrc/controller/wolplus.lua
 sed -i 's/_("全能推送"), 30/_("全能推送"), 50/' feeds/danshui1/luci-app-pushbot/luasrc/controller/pushbot.lua
-sed -i 's/_("Unblock Netease Music"), 50/_("Unblock Netease Music"), 55/' feeds/luci/applications/luci-app-unblockmusic/luasrc/controller/unblockmusic.lua
+sed -i 's/50/55/' feeds/luci/applications/luci-app-unblockneteasemusic/root/usr/share/luci/menu.d/luci-app-unblockneteasemusic.json
 sed -i 's/_("FTP Server")/_("FTP Server"), 5/' feeds/luci/applications/luci-app-vsftpd/luasrc/controller/vsftpd.lua
 sed -i 's/"services"/"nas"/g' feeds/danshui1/luci-app-lucky/luasrc/controller/lucky.lua
 sed -i 's/_("Lucky"), 57/_("Lucky"), 20/' feeds/danshui1/luci-app-lucky/luasrc/controller/lucky.lua
