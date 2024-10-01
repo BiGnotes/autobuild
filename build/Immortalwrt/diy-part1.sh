@@ -15,6 +15,4 @@ export OpenClash_Core="0"                   # 增加OpenClash时,把核心下载
 # 增加AdGuardHome插件和核心
 export AdGuardHome_Core="1"                  # 编译固件时自动增加AdGuardHome插件和AdGuardHome插件核心,需要注意的是一个核心20多MB的,小闪存机子搞不来(1为启用命令,填0为不作修改)
 
-echo 'src-git parent https://github.com/sirpdboy/luci-app-parentcontrol.git' >> feeds.conf.default
-echo 'src-git bear https://github.com/NateLol/luci-app-beardropper.git' >> feeds.conf.default
-echo 'src-git speedlimit https://github.com/loryncien/luci-app-speedlimit.git' >> feeds.conf.default
+echo 'src-git imp https://github.com/BiGnotes/im-package.git' >> feeds.conf.default
