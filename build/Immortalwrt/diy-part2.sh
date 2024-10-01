@@ -65,6 +65,28 @@ export kernel_usage="stable"
 
 
 # 修改插件名字
+sed -i '/entry({"admin", "control"}, firstchild(), "Control", 44).dependent = false/d' feeds/danshui1/luci-app-autotimeset/luasrc/controller/autotimeset.lua
+sed -i 's/"admin", "control"/"admin", "system"/g' feeds/danshui1/luci-app-autotimeset/luasrc/controller/autotimeset.lua
+sed -i 's/"admin","control"/"admin", "system"/g' feeds/danshui1/luci-app-autotimeset/luasrc/controller/autotimeset.lua
+sed -i 's/, 20/, 62/' feeds/danshui1/luci-app-autotimeset/luasrc/controller/autotimeset.lua
+sed -i 's/"services"/"control"/g' feeds/luci/applications/luci-app-appfilter/luasrc/controller/appfilter.lua
+sed -i 's/2\([0-5]\)/8\1/g' feeds/luci/applications/luci-app-appfilter/luasrc/controller/appfilter.lua
+sed -i 's/_("AdGuard Home"), 10/_("AdGuard Home"), 5/' feeds/danshui1/luci-app-adguardhome/luasrc/controller/AdGuardHome.lua
+sed -i 's/_("Pass Wall"), -1/_("Pass Wall"), 10/' feeds/passwall1/luci-app-passwall/luasrc/controller/passwall.lua
+sed -i 's/nil, -1/nil, 10/' feeds/passwall1/luci-app-passwall/luasrc/controller/passwall.lua
+sed -i 's/_("OpenClash"), 50/_("OpenClash"), 15/' feeds/OpenClash/luci-app-openclash/luasrc/controller/openclash.lua 
+sed -i 's/: 30/: 20/' feeds/danshui1/luci-app-mosdns/root/usr/share/luci/menu.d/luci-app-mosdns.json
+sed '/"title": "SmartDNS",/a\        "order": 25,' feeds/danshui1/luci-app-mosdns/root/usr/share/luci/menu.d/luci-app-mosdns.json
+sed -i 's/50/40/' feeds/danshui1/luci-app-wolplus/luasrc/controller/wolplus.lua
+sed -i 's/_("全能推送"), 30/_("全能推送"), 50/' feeds/danshui1/luci-app-pushbot/luasrc/controller/pushbot.lua
+sed -i 's/_("Unblock Netease Music"), 50/_("Unblock Netease Music"), 55/' feeds/luci/applications/luci-app-unblockmusic/luasrc/controller/unblockmusic.lua
+sed -i 's/_("FTP Server")/_("FTP Server"), 5/' feeds/luci/applications/luci-app-vsftpd/luasrc/controller/vsftpd.lua
+sed -i 's/"services"/"nas"/g' feeds/danshui1/luci-app-lucky/luasrc/controller/lucky.lua
+sed -i 's/_("Lucky"), 57/_("Lucky"), 20/' feeds/danshui1/luci-app-lucky/luasrc/controller/lucky.lua
+sed -i 's/"services"/"nas"/g' feeds/luci/applications/luci-app-vlmcsd/luasrc/controller/vlmcsd.lua
+sed -i 's/_("KMS Server"), 100/_("KMS Server"), 25/' feeds/luci/applications/luci-app-vlmcsd/luasrc/controller/vlmcsd.lua
+sed -i 's/"vpn"/"nas"/g' feeds/luci/applications/luci-app-zerotier/root/usr/share/luci/menu.d/luci-app-zerotier.json
+sed -i 's/90/30/' feeds/luci/applications/luci-app-zerotier/root/usr/share/luci/menu.d/luci-app-zerotier.json
 sed -i 's/"aMule设置"/"电驴下载"/g' `egrep "aMule设置" -rl ./`
 sed -i 's/"网络存储"/"NAS"/g' `egrep "网络存储" -rl ./`
 sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' `egrep "Turbo ACC 网络加速" -rl ./`
@@ -76,7 +98,7 @@ sed -i 's/"Web 管理"/"Web管理"/g' `egrep "Web 管理" -rl ./`
 # sed -i 's/"管理权"/"改密码"/g' `egrep "管理权" -rl ./`
 # sed -i 's/"带宽监控"/"监控"/g' `egrep "带宽监控" -rl ./`
 sed -i 's/"设置向导"/"向导"/g' `egrep "设置向导" -rl ./`
-
+sed -i 's/"网络存储"/"服务器"/g' `egrep "网络存储" -rl ./`
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间(根据编译机型变化,自行调整删除名称)
 cat >"$CLEAR_PATH" <<-EOF
